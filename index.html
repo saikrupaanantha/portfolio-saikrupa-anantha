@@ -5,17 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saikrupa</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
-        })();
-    </script>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
                 <li><a href="#services">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -74,49 +69,22 @@
             </div>
         </div>
     </section>
-
     <footer id="contact">
         <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" name="to_name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <p id="form-response" class="hidden"></p>
+            <h2>Contact</h2>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="linkedin-link">
+                <img src="linkedin.png" alt="LinkedIn Logo">
+            </a>
+            
         </div>
     </footer>
+    
+    <button id="scroll-to-top" aria-label="Scroll to top">&#8679;</button>
+    
+    <script src="script.js"></script>
+    
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contact-form');
-            const responseMessage = document.getElementById('form-response');
-
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
-                
-                // Collect the form data
-                const formData = {
-                    to_name: form.to_name.value,  // Ensure this field name matches {{to_name}} in your template
-                    email: form.email.value,
-                    message: form.message.value
-                };
-
-                // Send the email using EmailJS
-                emailjs.send('service_68331fm', 'YOUR_TEMPLATE_ID', formData)
-                    .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        responseMessage.textContent = 'Thank you for your message!';
-                        responseMessage.classList.remove('hidden');
-                        form.reset();
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                        responseMessage.textContent = 'Sorry, there was an error sending your message.';
-                        responseMessage.classList.remove('hidden');
-                    });
-            });
-        });
-    </script>
+    
 </body>
 </html>
+
