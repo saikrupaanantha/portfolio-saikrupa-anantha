@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saikrupa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="profile-pic"></div>
+            <h1>Hi, It's Saikrupa!</h1>
+            <p>I'm a Final year IT Student.</p>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Java</h3>
+                    <p>Skilled in solving problems using Java, leveraging OOP principles and basic data structures and algorithms for efficient solutions.</p>
+                </div>
+                <div class="card">
+                    <h3>UI/UX Design</h3>
+                    <p>Creating visually appealing and user-friendly interfaces, proficient in Canva and Figma for design work.</p>
+                </div>
+                <div class="card">
+                    <h3>Frontend Development</h3>
+                    <p>Building responsive and interactive websites using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="card">
+                    <h3>Python</h3>
+                    <p>Proficient in Python and libraries such as NumPy, Pandas, and Matplotlib for data manipulation and visualization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>2021 - 2025</h3>
+                    <p><strong>Bachelor of Technology in Information Technology</strong></p>
+                    <p>Sri Sairam Institute Of Technology</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2020 - 2021</h3>
+                    <p><strong>Higher Secondary</strong></p>
+                    <p>New Prince Shri Bhavani Senior Secondary School</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2018 - 2019</h3>
+                    <p><strong>Secondary School</strong></p>
+                    <p>SRDK Vivekananda Vidayalaya Junior College</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" name="to_name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="form-response" class="hidden"></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            const responseMessage = document.getElementById('form-response');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                
+                // Collect the form data
+                const formData = {
+                    to_name: form.to_name.value,  // Ensure this field name matches {{to_name}} in your template
+                    email: form.email.value,
+                    message: form.message.value
+                };
+
+                // Send the email using EmailJS
+                emailjs.send('service_68331fm', 'YOUR_TEMPLATE_ID', formData)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        responseMessage.textContent = 'Thank you for your message!';
+                        responseMessage.classList.remove('hidden');
+                        form.reset();
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        responseMessage.textContent = 'Sorry, there was an error sending your message.';
+                        responseMessage.classList.remove('hidden');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
