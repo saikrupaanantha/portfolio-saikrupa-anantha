@@ -1,26 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    
-    const scrollToTopButton = document.getElementById('scroll-to-top');
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 200) {
-            scrollToTopButton.style.display = 'block';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    });
-
-    scrollToTopButton.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    navToggle.addEventListener('click', function () {
-        navMenu.classList.toggle('active');
-    });
+document.getElementById('nav-toggle').addEventListener('click', function () {
+    var navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active');
 });
+
+var scrollToTopBtn = document.getElementById("scroll-to-top");
+var rootElement = document.documentElement;
+
+function handleScroll() {
+    if (rootElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    // Scroll smoothly to the top
+    rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+document.addEventListener("scroll", handleScroll);
