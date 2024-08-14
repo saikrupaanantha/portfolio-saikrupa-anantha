@@ -1,10 +1,10 @@
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #0a0a0a;
     color: #fff;
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 header {
@@ -38,6 +38,11 @@ header nav ul li a {
     text-decoration: none;
     color: #D2B48C;
     font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #fff;
 }
 
 #nav-toggle {
@@ -50,16 +55,6 @@ header nav ul li a {
     margin: 0;
     display: flex;
     justify-content: center;
-}
-
-#nav-menu li {
-    margin: 0 15px;
-}
-
-#nav-menu li a {
-    text-decoration: none;
-    color: #D2B48C;
-    font-size: 1.2em;
 }
 
 /* Styles for scroll-to-top button */
@@ -76,6 +71,7 @@ header nav ul li a {
     font-size: 1.5em;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-in-out;
 }
 
 #scroll-to-top:hover {
@@ -118,6 +114,7 @@ header nav ul li a {
 header .container {
     position: relative;
     margin-top: 60px;
+    animation: fadeIn 2s;
 }
 
 .profile-pic {
@@ -128,6 +125,11 @@ header .container {
     margin: 0 auto;
     border: 5px solid #D2B48C;
     box-shadow: 0 0 15px #D2B48C;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
 }
 
 header h1 {
@@ -153,6 +155,7 @@ section {
 #services h2, #education h2, footer h2 {
     text-align: center;
     color: #D2B48C;
+    animation: slideIn 1s forwards;
 }
 
 .service-cards {
@@ -169,6 +172,12 @@ section {
     text-align: center;
     width: 200px;
     box-shadow: 0 0 15px rgba(210, 180, 140, 0.7);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #2a2a2a;
 }
 
 .card h3 {
@@ -190,6 +199,12 @@ section {
     width: 80%;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(210, 180, 140, 0.7);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px);
+    background-color: #2a2a2a;
 }
 
 .timeline-item h3 {
@@ -208,22 +223,47 @@ section {
 
 footer {
     background-color: #111;
+    padding: 20px 0;
     text-align: center;
-    padding: 50px 0;
 }
 
-footer a.linkedin-link {
+footer a {
     color: #D2B48C;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
 }
 
-footer a.linkedin-link:hover {
-    text-decoration: underline;
+footer a:hover {
+    color: #fff;
 }
-.linkedin-link img {
-    width: 24px; 
-    height: auto;
-    vertical-align: middle;
-    border: none;
+
+footer img {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+}
+.contact-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align vertically */
+    gap: 20px; /* Space between icons */
+    margin: 0 auto; /* Center the whole section */
+    max-width: 300px; /* Optional: restrict the width */
+}
+
+.contact-icons a {
+    display: inline-block;
+}
+
+.contact-icons img {
+    width: 40px;
+    height: 40px;
+    display: block; /* Ensure images are block elements to align correctly */
 }
