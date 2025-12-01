@@ -72,8 +72,13 @@ header nav ul li a:hover {
 }
 
 .skills li{
+<<<<<<< HEAD
     background-color:  #D2B48C;
     border-radius: 20px;
+=======
+    background-color: #D2B48C;;
+    border-radius: 10px;
+>>>>>>> 030378f8b7f6c7f6e191ef9bb707a4cb0448eae9
     padding: 20px;
     font-weight: bold;
 }
