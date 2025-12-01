@@ -70,26 +70,15 @@ header nav ul li a:hover {
     padding: 1px;
     justify-items: center;
 }
-
-.skills li{
-<<<<<<< HEAD
-    background-color:  #D2B48C;
-    border-radius: 20px;
-=======
-    background-color: #D2B48C;;
-    border-radius: 10px;
->>>>>>> 030378f8b7f6c7f6e191ef9bb707a4cb0448eae9
-    padding: 20px;
-    font-weight: bold;
+.skills img{
+    width: 70px;
+    height: 70px;
 }
-
-.skills li:hover{
-    background-color: #ffffff;
-    color:  #D2B48C;
-    border-radius: 10px;
-    padding: 20px;
+.skills img:hover{
     transform: translateY(-10px);
 }
+
+
 
 /* Styles for scroll-to-top button */
 #scroll-to-top {
@@ -282,6 +271,81 @@ footer img {
     margin: 0 auto;
     display: block;
 }
+/* Toggle button styles */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    border: 2px solid #D2B48C;
+    background: transparent;
+    color: #D2B48C;
+    font-size: 1.1em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.toggle-btn.active,
+.toggle-btn:hover {
+    background-color: #D2B48C;
+    color: black;
+}
+
+.toggle-content {
+    display: none;
+    animation: fadeIn 0.8s ease;
+}
+
+.toggle-content.active {
+    display: block;
+}
+
+/* Publications & Projects */
+#projects-publications h2 {
+    text-align: center;
+    color: #D2B48C;
+}
+
+.pp-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pp-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    width: 40%;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(210,180,140,0.7);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+.pp-card li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.pp-card:hover {
+    transform: translateY(-10px);
+}
+
+.pp-card a {
+    color: #D2B48C;
+    text-decoration: none;
+}
+
+.pp-card a:hover {
+    color: white;
+}
+
 .contact-section {
     text-align: center;
     margin-top: 20px;

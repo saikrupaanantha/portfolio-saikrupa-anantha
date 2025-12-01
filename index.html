@@ -28,26 +28,35 @@
             <h2>Skills</h2>
             <div>
                 <ul class="skills">
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>SQL</li>
-                    <li>Git and Github</li>
-                    <li>Canava</li>
-                    <li>Figma</li>
-                    <li>Power BI</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>ReactJs</li>
+                    <img src="Java.png" alt="java image">
+                    <img src="Python.png" alt="Python image">
+                    <img src="C-lang.png"  alt="C image">
+                    <img src="Mysql.png" alt="SQL image">
+                    <img src="git.png" alt="git image">
+                    <img src="github.png" style="border-radius: 38px;" alt="github image">
+                    <img src="canva.png" alt="canva image">
+                    <img src="figma.png" style="width: 120px;" alt="figma image">
+                    <img src="powerbi.png" alt="powerbi image">
+                    <img src="html.png" style="width: 110px;" alt="html image">
+                    <img src="css.png" style="width: 100px; height: 75px;" alt="css image">
+                    <img src="js.png" style="width: 110px;" alt="javascript image">
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="education">
-        <div class="container">
-            <h2>Education</h2>
+    <div class="container">
+        <h2>Education & Experience</h2>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" data-target="education-content">Education</button>
+            <button class="toggle-btn" data-target="experience-content">Work Experience</button>
+        </div>
+
+        <!-- Education Content -->
+        <div id="education-content" class="toggle-content active">
             <div class="timeline">
                 <div class="timeline-item">
                     <h3>2021 - 2025</h3>
@@ -66,7 +75,50 @@
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Work Experience Content -->
+        <div id="experience-content" class="toggle-content">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <p><strong>Hyundai motors</strong></p>
+                    <p>Internship</p>
+                    <p style="color: #D2B48C;">March 2023</p>
+                    <p style="text-align: justify;">Completed a 15-day internship at Hyundai Motors India, gaining knowledge in AR/VR, SAP ERP, database management, and core IT concepts.</p>
+                </div>
+                <div class="timeline-item">
+                    <p><strong>Changepond technologies</strong></p>
+                    <p>Internship</p>
+                    <p style="color: #D2B48C;">June 2024</p>
+                    <p style="text-align: justify;">Completed a 2-week internship at Changepond Technologies, gaining knowledge about web development, various development tools, and real-time project completion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects-publications">
+    <div class="container">
+        <h2>Projects & Publications</h2>
+        
+        <div class="pp-grid">
+            <div class="pp-card">
+                <h3>🔗 Publications</h3>
+                <ul>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/document/10780318" target="_blank" style="font-weight: bold;">Finwise - A smart investment solution</a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/document/10823373" target="_blank" style="font-weight: bold;">Enhancing Dog Tracking Through Dynamic Geofencing and Environmental Awareness</a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/document/11011696" target="_blank" style="font-weight: bold;">Smart Stitch: A Mobile App for Personalized Garment Customization and Stitching Guidance</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
     <div class="contact-section">
         <h2 class="contact">Contact</h2>
         <div class="contact-icons">
@@ -74,10 +126,10 @@
                 <img src="linkedin.png" class="logoo" alt="LinkedIn">
             </a>
             <a href="mailto:saikrupaedu@gmail.com">
-                <img src="gmail.png" class="logoo" alt="Gmail">
+                <img src="gmail.png" class="logoo" style="width: 55px; height: 55px;" alt="Gmail">
             </a>
             <a href="https://github.com/saikrupaanantha" target="_blank">
-                <img src="github.png" class="logoo" alt="GitHub">
+                <img src="github.png" class="logoo" style="border-radius: 38px;" alt="GitHub">
             </a>
         </div>
     </div>
