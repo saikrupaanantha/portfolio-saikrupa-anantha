@@ -45,7 +45,7 @@ header nav ul li a:hover {
     color: black;
     background-color: #D2B48C;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
 }
 
 #nav-toggle {
@@ -72,18 +72,17 @@ header nav ul li a:hover {
 }
 
 .skills li{
-    background-color: #d8bf9f;
-    border-radius: 10px;
+    background-color:  #D2B48C;
+    border-radius: 20px;
     padding: 20px;
     font-weight: bold;
 }
 
 .skills li:hover{
     background-color: #ffffff;
-    color: black;
+    color:  #D2B48C;
     border-radius: 10px;
     padding: 20px;
-    font-weight: bold;
     transform: translateY(-10px);
 }
 
@@ -300,6 +299,14 @@ footer img {
     width: 40px;
     height: 40px;
     display: block; /* Ensure images are block elements to align correctly */
+    border-radius: 15px;
+}
+.contact-icons img:hover{
+    transform: translateY(-10px);
+}
+
+.contact{
+    color:  #D2B48C ;
 }
 
 
